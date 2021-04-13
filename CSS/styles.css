@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 :root {
   --primary-text-color: #212121;
   --title-text-color: #000000;
@@ -7,6 +12,10 @@
 }
 
 .page {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
   font-family: Roboto, sans-serif;
   color: var(--primary-text-color);
   background: var(--primary-background-color);
@@ -26,8 +35,10 @@
   color: var(--accent-color);
 }
 /* Site nav */
-.nav {
+.list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .nav a {
   text-decoration: none;
@@ -45,9 +56,7 @@
 .nav .link:focus {
   color: var(--accent-color);
 }
-.auth-nav {
-  list-style: none;
-}
+
 .auth-nav a {
   text-decoration: none;
   font-weight: 500;
@@ -61,11 +70,15 @@
   color: var(--accent-color);
 }
 /* Hero */
+.hero {
+  text-align: center;
+}
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -73,7 +86,13 @@
 }
 
 /* Section */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .section-title {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -85,6 +104,8 @@
   list-style: none;
 }
 .feature-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -133,15 +154,19 @@
 }
 /* Button */
 .button-primary {
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   display: flex;
   align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button-secondary {
   font-weight: 500;
