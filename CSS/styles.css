@@ -122,8 +122,22 @@
 }
 /* Work */
 .work {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
   list-style: none;
 }
+
+.flex-element {
+  width: 370px;
+  margin: 15px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.flex-element:nth-child(3n) {
+  margin-right: 0;
+}
+
 .work .title {
   font-weight: 700;
   font-size: 18px;
